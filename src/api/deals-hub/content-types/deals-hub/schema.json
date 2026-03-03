@@ -1,0 +1,59 @@
+{
+  "kind": "singleType",
+  "collectionName": "deals_hubs",
+  "info": {
+    "singularName": "deals-hub",
+    "pluralName": "deals-hubs",
+    "displayName": "Deals Hub",
+    "description": "Deals and Discounts hub page content"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "required": true
+    },
+    "heroDescription": {
+      "type": "text"
+    },
+    "metricsDiscountCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "metricsBrandCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "howToVerifyTitle": {
+      "type": "string"
+    },
+    "howToVerifyDescription": {
+      "type": "richtext"
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "deals.faq-item"
+    },
+    "newsletterTitle": {
+      "type": "string"
+    },
+    "newsletterDescription": {
+      "type": "text"
+    },
+    "submitDiscountTitle": {
+      "type": "string"
+    },
+    "submitDiscountDescription": {
+      "type": "text"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

@@ -129,3 +129,9 @@ dist
 build
 .strapi-updater.json
 .strapi-cloud.json
+.github/copilot-instructions.md
+/.chunkhound
+.chunkhound.json
+.mcp.json
+CLAUDE.md
+/.claude

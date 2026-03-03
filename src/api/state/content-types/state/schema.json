@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "states",
+  "info": {
+    "singularName": "state",
+    "pluralName": "states",
+    "displayName": "State",
+    "description": "US states for location-based discounts"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "abbreviation": {
+      "type": "string",
+      "required": true
+    },
+    "discounts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::discount.discount",
+      "mappedBy": "state"
+    }
+  }
+}

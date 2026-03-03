@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "brands",
+  "info": {
+    "singularName": "brand",
+    "pluralName": "brands",
+    "displayName": "Brand",
+    "description": "Brand entries with logos and verification info"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "verification": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::verification.verification",
+      "inversedBy": "brands"
+    },
+    "discounts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::discount.discount",
+      "mappedBy": "brand"
+    },
+    "discount_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::discount-category.discount-category",
+      "inversedBy": "brands"
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "deals.faq-item"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

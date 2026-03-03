@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Military Deals & Discounts | MyMilitaryLifestyle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== MML BRAND VARIABLES ===== */
+        :root {
+            --mml-primary: #587478;
+            --mml-primary-dark: #456062;
+            --mml-primary-light: #6a8a8e;
+            --mml-accent: #0D6EFD;
+            --mml-accent-hover: #0B5ED7;
+            --mml-cta: #FB7023;
+            --mml-cta-hover: #e5631a;
+            --mml-white: #FFFFFF;
+            --mml-text: #010F1C;
+            --mml-text-light: #4b5563;
+            --mml-text-muted: #6b7280;
+            --mml-background: #FFFFFF;
+            --mml-background-alt: #F8F9FA;
+            --mml-border: #e5e7eb;
+            --mml-border-light: #f3f4f6;
+            --mml-success: #10b981;
+            --mml-warning: #f59e0b;
+            --mml-error: #ef4444;
+            --space-1: 4px;
+            --space-2: 8px;
+            --space-3: 12px;
+            --space-4: 16px;
+            --space-5: 20px;
+            --space-6: 24px;
+            --space-8: 32px;
+            --space-10: 40px;
+            --space-12: 48px;
+            --radius: 10px;
+            --radius-sm: 6px;
+            --radius-lg: 16px;
+            --radius-pill: 50px;
+            --shadow-sm: 0 1px 2px rgba(1, 15, 28, 0.05);
+            --shadow-md: 0 4px 12px rgba(1, 15, 28, 0.1);
+            --shadow-lg: 0 12px 32px rgba(1, 15, 28, 0.12);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 14px;
+            background: var(--mml-background);
+            color: var(--mml-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600; line-height: 1.3; color: var(--mml-text);
+        }
+        h1 { font-size: 20px; font-weight: 700; }
+        h2 { font-size: 20px; font-weight: 600; }
+        h3 { font-size: 16px; font-weight: 600; }
+        h4 { font-size: 14px; font-weight: 600; }
+        h5, h6 { font-size: 12px; font-weight: 500; }
+        a { color: var(--mml-accent); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--mml-accent-hover); }
+        img { max-width: 100%; height: auto; }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            gap: var(--space-2); padding: var(--space-3) var(--space-6);
+            border-radius: var(--radius-pill);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px; font-weight: 600; border: none; cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .btn-primary { background: var(--mml-cta); color: var(--mml-white); }
+        .btn-primary:hover { background: var(--mml-cta-hover); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(251, 112, 35, 0.3); }
+        .btn-secondary { background: var(--mml-accent); color: var(--mml-white); }
+        .btn-secondary:hover { background: var(--mml-accent-hover); }
+        .btn-outline { background: transparent; color: var(--mml-primary); border: 2px solid var(--mml-primary); }
+        .btn-outline:hover { background: var(--mml-primary); color: var(--mml-white); }
+
+        /* ===== NAVIGATION ===== */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: var(--mml-white);
+            border-bottom: 1px solid var(--mml-border);
+            box-shadow: var(--shadow-sm);
+        }
+        .nav-inner {
+            max-width: 1280px; margin: 0 auto; padding: 0 var(--space-6);
+            display: flex; align-items: center; justify-content: space-between; height: 64px;
+        }
+        .nav-logo { display: flex; align-items: center; gap: var(--space-3); }
+        .nav-logo img { height: 36px; }
+        .nav-logo-text {
+            font-family: 'Poppins', sans-serif; font-size: 16px;
+            font-weight: 600; color: var(--mml-primary);
+        }
+        .nav-links { display: flex; gap: var(--space-8); list-style: none; }
+        .nav-links a { color: var(--mml-text); font-size: 14px; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--mml-accent); }
+        .nav-links a.active { color: var(--mml-cta); }
+
+        /* ===== SECTION 1: HERO ===== */
+        .hero {
+            padding: 100px var(--space-6) 60px;
+            background: linear-gradient(135deg, var(--mml-primary) 0%, var(--mml-primary-dark) 100%);
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        .hero-inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: var(--space-2);
+            background: rgba(255, 255, 255, 0.15); color: var(--mml-white);
+            padding: var(--space-2) var(--space-4); border-radius: var(--radius-pill);
+            font-size: 12px; font-weight: 600; margin-bottom: var(--space-4);
+        }
+        .hero h1 {
+            font-size: clamp(24px, 4vw, 36px); color: var(--mml-white);
+            max-width: 700px; margin-bottom: var(--space-4); font-weight: 700;
+        }
+        .hero h1 span { color: var(--mml-cta); }
+        .hero-subtitle { font-size: 16px; color: rgba(255, 255, 255, 0.9); max-width: 550px; margin-bottom: var(--space-6); }
+        .hero-search {
+            background: var(--mml-white); border-radius: var(--radius-pill);
+            padding: var(--space-1); display: flex; gap: var(--space-2);
+            max-width: 600px; box-shadow: var(--shadow-lg);
+        }
+        .hero-search input {
+            flex: 1; border: none; padding: var(--space-3) var(--space-5);
+            font-size: 14px; font-family: inherit; background: transparent;
+            outline: none; color: var(--mml-text); border-radius: var(--radius-pill);
+        }
+        .hero-search input::placeholder { color: var(--mml-text-muted); }
+        .hero-search-btn {
+            background: var(--mml-cta); color: var(--mml-white); border: none;
+            padding: var(--space-3) var(--space-6); border-radius: var(--radius-pill);
+            font-weight: 600; font-size: 14px; cursor: pointer;
+            display: flex; align-items: center; gap: var(--space-2); transition: background 0.2s;
+        }
+        .hero-search-btn:hover { background: var(--mml-cta-hover); }
+        .hero-audience { display: flex; gap: var(--space-2); margin-top: var(--space-5); flex-wrap: wrap; }
+        .audience-tag {
+            background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--mml-white); padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-pill); font-size: 12px; font-weight: 500;
+            cursor: pointer; transition: all 0.2s;
+        }
+        .audience-tag:hover, .audience-tag.active { background: var(--mml-cta); border-color: var(--mml-cta); }
+
+        /* ===== SECTION 2: METRICS ===== */
+        .metrics { background: var(--mml-white); border-bottom: 1px solid var(--mml-border); }
+        .metrics-inner {
+            max-width: 1280px; margin: 0 auto; padding: var(--space-10) var(--space-6);
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6);
+        }
+        .metric-item { text-align: center; padding: var(--space-4); position: relative; }
+        .metric-item:not(:last-child)::after {
+            content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+            width: 1px; height: 50%; background: var(--mml-border);
+        }
+        .metric-number {
+            font-family: 'Poppins', sans-serif; font-size: 32px; font-weight: 600;
+            color: var(--mml-primary); line-height: 1; margin-bottom: var(--space-2);
+        }
+        .metric-number span { color: var(--mml-cta); }
+        .metric-label { color: var(--mml-text-muted); font-size: 14px; font-weight: 500; }
+
+        /* ===== SECTION 3: LOGO MARQUEE ===== */
+        .logo-marquee { background: var(--mml-background-alt); padding: var(--space-8) 0; overflow: hidden; }
+        .marquee-label {
+            text-align: center; color: var(--mml-text-muted); font-size: 12px;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;
+            margin-bottom: var(--space-5);
+        }
+        .marquee-track { display: flex; animation: marquee 25s linear infinite; }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-logos { display: flex; gap: var(--space-12); padding: 0 var(--space-6); align-items: center; }
+        .marquee-logo {
+            height: 32px; opacity: 0.5; filter: grayscale(1); transition: all 0.3s;
+            white-space: nowrap; font-weight: 600; font-size: 16px; color: var(--mml-text-muted);
+            display: flex; align-items: center; gap: var(--space-2);
+        }
+        .marquee-logo:hover { opacity: 1; filter: grayscale(0); color: var(--mml-primary); }
+
+        /* ===== SECTION 4: HOW TO VERIFY ===== */
+        .verify-section { padding: var(--space-12) var(--space-6); background: var(--mml-white); }
+        .verify-inner {
+            max-width: 1280px; margin: 0 auto; display: grid;
+            grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: center;
+        }
+        .verify-content h2 { font-size: 24px; margin-bottom: var(--space-3); }
+        .verify-content > p { color: var(--mml-text-light); font-size: 14px; margin-bottom: var(--space-6); }
+        .verify-steps { display: flex; flex-direction: column; gap: var(--space-5); }
+        .verify-step { display: flex; gap: var(--space-4); align-items: flex-start; }
+        .step-number {
+            width: 32px; height: 32px; background: var(--mml-cta); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 14px; color: var(--mml-white); flex-shrink: 0;
+        }
+        .step-text h4 { font-size: 14px; margin-bottom: var(--space-1); }
+        .step-text p { font-size: 12px; color: var(--mml-text-muted); }
+        .verify-visual {
+            background: var(--mml-primary); border-radius: var(--radius-lg);
+            padding: var(--space-8); position: relative;
+        }
+        .verify-card { background: var(--mml-white); border-radius: var(--radius); padding: var(--space-6); }
+        .verify-card-header {
+            display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-5);
+        }
+        .verify-icon {
+            width: 44px; height: 44px; background: var(--mml-success); border-radius: var(--radius);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--mml-white); font-size: 20px;
+        }
+        .verify-card-header h3 { font-size: 16px; }
+        .verify-card-header p { font-size: 12px; color: var(--mml-text-muted); }
+        .verify-providers { display: flex; gap: var(--space-3); }
+        .provider-badge {
+            background: var(--mml-background-alt); padding: var(--space-3) var(--space-4);
+            border-radius: var(--radius); font-weight: 600; font-size: 12px; color: var(--mml-text-light);
+        }
+
+        /* ===== SECTION 5: FEATURED DISCOUNTS ===== */
+        .featured-section { padding: var(--space-12) var(--space-6); background: var(--mml-background-alt); }
+        .section-header {
+            max-width: 1280px; margin: 0 auto var(--space-8);
+            display: flex; justify-content: space-between; align-items: flex-end;
+        }
+        .section-header h2 { font-size: 20px; }
+        .section-header p { color: var(--mml-text-muted); font-size: 14px; margin-top: var(--space-1); }
+        .view-all-link {
+            color: var(--mml-accent); font-weight: 600; font-size: 14px;
+            display: flex; align-items: center; gap: var(--space-2);
+        }
+        .view-all-link:hover { color: var(--mml-accent-hover); }
+        .discount-grid {
+            max-width: 1280px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5);
+        }
+        .discount-card {
+            background: var(--mml-white); border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--shadow-sm); border: 1px solid var(--mml-border-light);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .discount-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .discount-card-header {
+            background: var(--mml-primary); padding: var(--space-5);
+            display: flex; justify-content: space-between; align-items: flex-start;
+        }
+        .discount-brand { display: flex; align-items: center; gap: var(--space-3); }
+        .brand-logo {
+            width: 44px; height: 44px; background: var(--mml-white); border-radius: var(--radius);
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; color: var(--mml-primary); font-size: 12px;
+        }
+        .brand-info h3 { color: var(--mml-white); font-size: 14px; }
+        .brand-info span { color: rgba(255, 255, 255, 0.7); font-size: 12px; }
+        .discount-badge {
+            background: var(--mml-cta); color: var(--mml-white);
+            padding: var(--space-1) var(--space-3); border-radius: var(--radius-pill);
+            font-weight: 700; font-size: 12px;
+        }
+        .discount-card-body { padding: var(--space-5); }
+        .discount-title { font-size: 14px; font-weight: 600; margin-bottom: var(--space-3); }
+        .discount-meta { display: flex; gap: var(--space-4); margin-bottom: var(--space-3); }
+        .meta-tag { display: flex; align-items: center; gap: var(--space-1); font-size: 12px; color: var(--mml-text-muted); }
+        .meta-tag i { font-size: 12px; color: var(--mml-primary); }
+        .discount-eligibility { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+        .eligibility-badge {
+            background: var(--mml-background-alt); color: var(--mml-text-light);
+            padding: var(--space-1) var(--space-3); border-radius: var(--radius-sm);
+            font-size: 10px; font-weight: 600; text-transform: uppercase;
+        }
+        .discount-card-footer {
+            padding: var(--space-4) var(--space-5); border-top: 1px solid var(--mml-border-light);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .card-link {
+            color: var(--mml-accent); font-weight: 600; font-size: 12px;
+            display: flex; align-items: center; gap: var(--space-1);
+        }
+        .verified-tag { color: var(--mml-success); font-size: 12px; font-weight: 500; }
+
+        /* ===== SECTION 6: BROWSE BY CATEGORY ===== */
+        .category-section { padding: var(--space-12) var(--space-6); background: var(--mml-white); }
+        .category-grid {
+            max-width: 1280px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4);
+        }
+        .category-card {
+            background: var(--mml-background-alt); border-radius: var(--radius);
+            padding: var(--space-5); text-align: center; transition: all 0.3s;
+            border: 1px solid transparent; cursor: pointer;
+        }
+        .category-card:hover { background: var(--mml-white); border-color: var(--mml-cta); box-shadow: var(--shadow-md); }
+        .category-icon {
+            width: 48px; height: 48px; background: var(--mml-primary); border-radius: var(--radius);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto var(--space-4); color: var(--mml-white); font-size: 20px;
+        }
+        .category-card h3 { font-size: 14px; margin-bottom: var(--space-1); }
+        .category-count { color: var(--mml-text-muted); font-size: 12px; }
+
+        /* ===== SECTION 7: BROWSE BY BRAND ===== */
+        .brand-section { padding: var(--space-12) var(--space-6); background: var(--mml-primary); }
+        .brand-section .section-header h2, .brand-section .section-header p { color: var(--mml-white); }
+        .brand-section .section-header p { opacity: 0.8; }
+        .brand-section .view-all-link { color: var(--mml-cta); }
+        .popular-brands {
+            max-width: 1280px; margin: 0 auto var(--space-6);
+            display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4);
+        }
+        .brand-card {
+            background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius); padding: var(--space-5) var(--space-4);
+            text-align: center; transition: all 0.3s;
+        }
+        .brand-card:hover { background: rgba(255, 255, 255, 0.15); border-color: var(--mml-cta); }
+        .brand-card-logo {
+            width: 56px; height: 56px; background: var(--mml-white); border-radius: var(--radius);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto var(--space-3); font-size: 24px;
+        }
+        .brand-card h4 { color: var(--mml-white); font-size: 14px; margin-bottom: var(--space-1); }
+        .brand-card span { color: rgba(255, 255, 255, 0.7); font-size: 12px; }
+        .az-links {
+            max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap;
+            gap: var(--space-2); justify-content: center;
+            padding-top: var(--space-6); border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .az-link {
+            width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
+            border-radius: var(--radius-sm); color: rgba(255, 255, 255, 0.7);
+            font-weight: 600; font-size: 12px; transition: all 0.2s;
+        }
+        .az-link:hover { background: var(--mml-cta); color: var(--mml-white); }
+
+        /* ===== SECTION 8: SEASONAL DEALS ===== */
+        .seasonal-section {
+            padding: var(--space-12) var(--space-6);
+            background: linear-gradient(135deg, var(--mml-cta) 0%, var(--mml-cta-hover) 100%);
+            position: relative; overflow: hidden;
+        }
+        .seasonal-inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }
+        .seasonal-header { text-align: center; margin-bottom: var(--space-8); }
+        .seasonal-badge {
+            display: inline-flex; align-items: center; gap: var(--space-2);
+            background: rgba(255, 255, 255, 0.2); color: var(--mml-white);
+            padding: var(--space-2) var(--space-4); border-radius: var(--radius-pill);
+            font-size: 12px; font-weight: 600; margin-bottom: var(--space-4);
+        }
+        .seasonal-header h2 { font-size: 24px; color: var(--mml-white); margin-bottom: var(--space-2); }
+        .seasonal-header p { color: rgba(255, 255, 255, 0.9); font-size: 14px; }
+        .seasonal-countdown { display: flex; justify-content: center; gap: var(--space-4); margin-top: var(--space-5); }
+        .countdown-item {
+            background: rgba(0, 0, 0, 0.15); border-radius: var(--radius);
+            padding: var(--space-4) var(--space-5); text-align: center; min-width: 70px;
+        }
+        .countdown-number { font-family: 'Poppins', sans-serif; font-size: 24px; font-weight: 600; color: var(--mml-white); line-height: 1; }
+        .countdown-label { color: rgba(255, 255, 255, 0.8); font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; margin-top: var(--space-1); }
+        .seasonal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
+        .seasonal-card { background: var(--mml-white); border-radius: var(--radius); overflow: hidden; transition: transform 0.3s; }
+        .seasonal-card:hover { transform: scale(1.02); }
+        .seasonal-card-body { padding: var(--space-5); }
+        .seasonal-card h3 { font-size: 16px; margin-bottom: var(--space-2); }
+        .seasonal-card p { color: var(--mml-text-muted); font-size: 12px; margin-bottom: var(--space-3); }
+        .seasonal-amount { font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; color: var(--mml-cta); }
+
+        /* ===== SECTION 9 & 10: AUDIENCE DEALS ===== */
+        .audience-deals { padding: var(--space-12) var(--space-6); }
+        .audience-deals.family { background: var(--mml-background-alt); }
+        .audience-deals.veterans { background: var(--mml-white); }
+        .audience-inner {
+            max-width: 1280px; margin: 0 auto; display: grid;
+            grid-template-columns: 1fr 1.5fr; gap: var(--space-10); align-items: center;
+        }
+        .audience-deals.veterans .audience-inner { grid-template-columns: 1.5fr 1fr; }
+        .audience-content h2 { font-size: 20px; margin-bottom: var(--space-3); }
+        .audience-content p { color: var(--mml-text-light); font-size: 14px; margin-bottom: var(--space-5); }
+        .audience-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
+        .audience-card {
+            background: var(--mml-white); border-radius: var(--radius); padding: var(--space-5);
+            border: 1px solid var(--mml-border-light); transition: all 0.3s;
+        }
+        .audience-deals.veterans .audience-card { background: var(--mml-background-alt); border-color: transparent; }
+        .audience-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        .audience-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-3); }
+        .audience-card h4 { font-size: 14px; }
+        .audience-card-discount {
+            background: var(--mml-cta); color: var(--mml-white);
+            padding: var(--space-1) var(--space-2); border-radius: var(--radius-sm);
+            font-size: 10px; font-weight: 700;
+        }
+        .audience-card p { color: var(--mml-text-muted); font-size: 12px; }
+
+        /* ===== SECTION 11: STATE DISCOUNTS ===== */
+        .state-section { padding: var(--space-12) var(--space-6); background: var(--mml-primary-dark); }
+        .state-inner { max-width: 1280px; margin: 0 auto; }
+        .state-header { text-align: center; margin-bottom: var(--space-8); }
+        .state-header h2 { font-size: 20px; color: var(--mml-white); margin-bottom: var(--space-2); }
+        .state-header p { color: rgba(255, 255, 255, 0.7); font-size: 14px; }
+        .state-map {
+            background: rgba(255, 255, 255, 0.05); border-radius: var(--radius-lg);
+            padding: var(--space-10); text-align: center; margin-bottom: var(--space-6);
+        }
+        .map-placeholder { font-size: 64px; margin-bottom: var(--space-4); }
+        .map-text { color: rgba(255, 255, 255, 0.6); font-size: 14px; }
+        .state-grid {
+            display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-3);
+        }
+        .state-chip {
+            background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.8); padding: var(--space-3) var(--space-4);
+            border-radius: var(--radius-sm); font-size: 12px; font-weight: 500;
+            text-align: center; transition: all 0.2s; cursor: pointer;
+        }
+        .state-chip:hover { background: var(--mml-cta); border-color: var(--mml-cta); color: var(--mml-white); }
+
+        /* ===== SECTION 12: RECENTLY ADDED ===== */
+        .recent-section { padding: var(--space-12) var(--space-6); background: var(--mml-background-alt); }
+        .recent-list {
+            max-width: 1280px; margin: 0 auto;
+            display: flex; flex-direction: column; gap: var(--space-4);
+        }
+        .recent-item {
+            background: var(--mml-white); border-radius: var(--radius); padding: var(--space-5);
+            display: flex; align-items: center; gap: var(--space-5);
+            border: 1px solid var(--mml-border-light); transition: all 0.3s;
+        }
+        .recent-item:hover { box-shadow: var(--shadow-md); transform: translateX(4px); }
+        .recent-date {
+            background: var(--mml-primary); color: var(--mml-white);
+            padding: var(--space-3) var(--space-4); border-radius: var(--radius-sm);
+            text-align: center; min-width: 60px;
+        }
+        .recent-date-day { font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; line-height: 1; }
+        .recent-date-month { font-size: 10px; text-transform: uppercase; opacity: 0.8; }
+        .recent-logo {
+            width: 44px; height: 44px; background: var(--mml-background-alt); border-radius: var(--radius);
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 12px; color: var(--mml-text-light); flex-shrink: 0;
+        }
+        .recent-info { flex: 1; }
+        .recent-info h4 { font-size: 14px; margin-bottom: var(--space-1); }
+        .recent-info p { color: var(--mml-text-muted); font-size: 12px; }
+        .recent-amount { font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 600; color: var(--mml-success); }
+
+        /* ===== SECTION 13: FAQ ===== */
+        .faq-section { padding: var(--space-12) var(--space-6); background: var(--mml-white); }
+        .faq-inner { max-width: 800px; margin: 0 auto; }
+        .faq-header { text-align: center; margin-bottom: var(--space-8); }
+        .faq-header h2 { font-size: 20px; margin-bottom: var(--space-2); }
+        .faq-header p { color: var(--mml-text-muted); font-size: 14px; }
+        .faq-list { display: flex; flex-direction: column; gap: var(--space-4); }
+        .faq-item {
+            background: var(--mml-background-alt); border-radius: var(--radius);
+            overflow: hidden; border: 1px solid var(--mml-border-light);
+        }
+        .faq-question {
+            padding: var(--space-5); display: flex; justify-content: space-between;
+            align-items: center; cursor: pointer; transition: background 0.2s;
+        }
+        .faq-question:hover { background: var(--mml-white); }
+        .faq-question h3 { font-size: 14px; font-weight: 600; }
+        .faq-icon {
+            width: 24px; height: 24px; border-radius: 50%; background: var(--mml-primary);
+            color: var(--mml-white); display: flex; align-items: center; justify-content: center;
+            font-size: 14px; transition: transform 0.3s; flex-shrink: 0;
+        }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+        .faq-answer {
+            padding: 0 var(--space-5) var(--space-5); color: var(--mml-text-light);
+            font-size: 14px; line-height: 1.7; display: none;
+        }
+        .faq-item.open .faq-answer { display: block; }
+
+        /* ===== SECTION 14: BLOG ===== */
+        .blog-section { padding: var(--space-12) var(--space-6); background: var(--mml-background-alt); }
+        .blog-grid {
+            max-width: 1280px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5);
+        }
+        .blog-card {
+            background: var(--mml-white); border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--shadow-sm); transition: all 0.3s;
+        }
+        .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .blog-image {
+            height: 160px; background: var(--mml-primary);
+            display: flex; align-items: center; justify-content: center; font-size: 48px;
+        }
+        .blog-body { padding: var(--space-5); }
+        .blog-category {
+            display: inline-block; background: var(--mml-background-alt); color: var(--mml-text-light);
+            padding: var(--space-1) var(--space-3); border-radius: var(--radius-sm);
+            font-size: 10px; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.05em; margin-bottom: var(--space-3);
+        }
+        .blog-card h3 { font-size: 16px; margin-bottom: var(--space-2); line-height: 1.4; }
+        .blog-excerpt { color: var(--mml-text-muted); font-size: 12px; margin-bottom: var(--space-4); line-height: 1.6; }
+        .blog-meta { display: flex; justify-content: space-between; color: var(--mml-text-muted); font-size: 12px; }
+
+        /* ===== SECTION 15: NEWSLETTER ===== */
+        .newsletter-section {
+            padding: var(--space-12) var(--space-6); background: var(--mml-cta);
+            position: relative; overflow: hidden;
+        }
+        .newsletter-section::before {
+            content: ''; position: absolute; top: -50%; right: -20%;
+            width: 60%; height: 200%; background: rgba(255, 255, 255, 0.08); transform: rotate(15deg);
+        }
+        .newsletter-inner { max-width: 600px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
+        .newsletter-inner h2 { font-size: 24px; color: var(--mml-white); margin-bottom: var(--space-3); }
+        .newsletter-inner p { color: rgba(255, 255, 255, 0.9); font-size: 14px; margin-bottom: var(--space-6); }
+        .newsletter-form { display: flex; gap: var(--space-3); max-width: 480px; margin: 0 auto; }
+        .newsletter-form input {
+            flex: 1; padding: var(--space-4) var(--space-5);
+            border: 2px solid rgba(255, 255, 255, 0.3); border-radius: var(--radius-pill);
+            font-size: 14px; font-family: inherit; background: var(--mml-white);
+            outline: none; transition: border-color 0.2s;
+        }
+        .newsletter-form input:focus { border-color: var(--mml-white); }
+        .newsletter-form button {
+            background: var(--mml-text); color: var(--mml-white); border: none;
+            padding: var(--space-4) var(--space-6); border-radius: var(--radius-pill);
+            font-weight: 600; font-size: 14px; cursor: pointer;
+            transition: all 0.2s; white-space: nowrap;
+        }
+        .newsletter-form button:hover { background: var(--mml-primary-dark); transform: translateY(-1px); }
+
+        /* ===== SECTION 16: SUBMIT DISCOUNT ===== */
+        .submit-section { padding: var(--space-12) var(--space-6); background: var(--mml-primary-dark); }
+        .submit-inner {
+            max-width: 1000px; margin: 0 auto; display: grid;
+            grid-template-columns: 1.2fr 1fr; gap: var(--space-10); align-items: center;
+        }
+        .submit-content h2 { font-size: 20px; color: var(--mml-white); margin-bottom: var(--space-4); }
+        .submit-content p { color: rgba(255, 255, 255, 0.8); font-size: 14px; margin-bottom: var(--space-6); }
+        .submit-benefits { display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-6); }
+        .benefit-item { display: flex; align-items: center; gap: var(--space-3); color: rgba(255, 255, 255, 0.9); font-size: 14px; }
+        .benefit-icon {
+            width: 20px; height: 20px; background: var(--mml-cta); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--mml-white); font-size: 10px; flex-shrink: 0;
+        }
+        .submit-btn {
+            display: inline-flex; align-items: center; gap: var(--space-2);
+            background: var(--mml-cta); color: var(--mml-white);
+            padding: var(--space-4) var(--space-6); border-radius: var(--radius-pill);
+            font-weight: 700; font-size: 14px; transition: all 0.2s;
+        }
+        .submit-btn:hover { background: var(--mml-cta-hover); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(251, 112, 35, 0.4); }
+        .submit-visual {
+            background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg); padding: var(--space-6);
+        }
+        .submit-stats { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); }
+        .stat-item { text-align: center; padding: var(--space-4); }
+        .stat-number { font-family: 'Poppins', sans-serif; font-size: 28px; font-weight: 600; color: var(--mml-cta); line-height: 1; }
+        .stat-label { color: rgba(255, 255, 255, 0.7); font-size: 12px; margin-top: var(--space-2); }
+
+        /* ===== FOOTER ===== */
+        .footer { background: var(--mml-text); padding: var(--space-8) var(--space-6); }
+        .footer-inner {
+            max-width: 1280px; margin: 0 auto; display: flex;
+            justify-content: space-between; align-items: center;
+        }
+        .footer-logo { display: flex; align-items: center; gap: var(--space-3); }
+        .footer-logo-icon {
+            width: 32px; height: 32px; background: var(--mml-cta); border-radius: var(--radius-sm);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--mml-white); font-weight: 700; font-size: 12px;
+        }
+        .footer-logo span { color: var(--mml-white); font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; }
+        .footer-links { display: flex; gap: var(--space-6); }
+        .footer-links a { color: rgba(255, 255, 255, 0.6); font-size: 12px; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--mml-cta); }
+        .footer-copyright { color: rgba(255, 255, 255, 0.4); font-size: 12px; }
+
+        /* ===== LOADING STATE ===== */
+        .skeleton {
+            background: linear-gradient(90deg, var(--mml-border-light) 25%, var(--mml-border) 50%, var(--mml-border-light) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: var(--radius);
+        }
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .discount-grid, .seasonal-grid, .blog-grid { grid-template-columns: repeat(2, 1fr); }
+            .category-grid { grid-template-columns: repeat(3, 1fr); }
+            .popular-brands { grid-template-columns: repeat(4, 1fr); }
+            .state-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .metrics-inner { grid-template-columns: repeat(2, 1fr); }
+            .metric-item:nth-child(2)::after { display: none; }
+            .verify-inner, .audience-inner, .submit-inner { grid-template-columns: 1fr; }
+            .audience-deals.veterans .audience-inner { grid-template-columns: 1fr; }
+            .discount-grid, .seasonal-grid, .blog-grid, .category-grid, .audience-cards { grid-template-columns: 1fr; }
+            .popular-brands { grid-template-columns: repeat(3, 1fr); }
+            .state-grid { grid-template-columns: repeat(3, 1fr); }
+            .hero-search { flex-direction: column; border-radius: var(--radius); }
+            .hero-search input, .hero-search-btn { border-radius: var(--radius-pill); }
+            .newsletter-form { flex-direction: column; }
+            .footer-inner { flex-direction: column; gap: var(--space-5); text-align: center; }
+            .footer-links { flex-wrap: wrap; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="https://staging.mymilitarylifestyle.com/assets/img/logo/logo.png" alt="MyMilitaryLifestyle" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <span class="nav-logo-text" style="display:none;">MyMilitaryLifestyle</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/deals-discounts/" class="active">Deals & Discounts</a></li>
+                <li><a href="/pcs/">PCS Resources</a></li>
+                <li><a href="/benefits/">Benefits Guide</a></li>
+                <li><a href="/community/">Community</a></li>
+                <li><a href="/blog/">Blog</a></li>
+            </ul>
+            <a href="/submit" class="btn btn-primary">Submit a Discount</a>
+        </div>
+    </nav>
+
+    <!-- Section 1: Hero -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <span>Trusted by 500,000+ Military Families</span>
+            </div>
+            <h1>Exclusive <span>Military Discounts</span> You've Earned</h1>
+            <p class="hero-subtitle">Discover thousands of verified discounts from brands that honor your service. Save on everything from travel to technology.</p>
+            <div class="hero-search">
+                <input type="text" placeholder="Search discounts, brands, or categories..." id="hero-search-input">
+                <button class="hero-search-btn" id="hero-search-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    Search
+                </button>
+            </div>
+            <div class="hero-audience" id="audience-tags">
+                <span class="audience-tag active" data-filter="all">All Military</span>
+                <span class="audience-tag" data-filter="active-duty">Active Duty</span>
+                <span class="audience-tag" data-filter="veterans">Veterans</span>
+                <span class="audience-tag" data-filter="national-guard">Guard & Reserve</span>
+                <span class="audience-tag" data-filter="spouses">Military Spouses</span>
+                <span class="audience-tag" data-filter="dependents">Dependents</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Metrics -->
+    <section class="metrics">
+        <div class="metrics-inner" id="metrics-section">
+            <div class="metric-item">
+                <div class="metric-number" id="metric-discounts">2,500<span>+</span></div>
+                <div class="metric-label">Active Discounts</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-number" id="metric-brands">850<span>+</span></div>
+                <div class="metric-label">Partner Brands</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-number">$12M<span>+</span></div>
+                <div class="metric-label">Saved by Families</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-number">4.9<span>★</span></div>
+                <div class="metric-label">User Rating</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Logo Marquee -->
+    <section class="logo-marquee">
+        <div class="marquee-label">Trusted by America's Favorite Brands</div>
+        <div class="marquee-track">
+            <div class="marquee-logos">
+                <span class="marquee-logo">Target</span>
+                <span class="marquee-logo">Home Depot</span>
+                <span class="marquee-logo">Apple</span>
+                <span class="marquee-logo">Southwest</span>
+                <span class="marquee-logo">Costco</span>
+                <span class="marquee-logo">Enterprise</span>
+                <span class="marquee-logo">Verizon</span>
+                <span class="marquee-logo">Marriott</span>
+                <span class="marquee-logo">Nike</span>
+                <span class="marquee-logo">Lowe's</span>
+            </div>
+            <div class="marquee-logos">
+                <span class="marquee-logo">Target</span>
+                <span class="marquee-logo">Home Depot</span>
+                <span class="marquee-logo">Apple</span>
+                <span class="marquee-logo">Southwest</span>
+                <span class="marquee-logo">Costco</span>
+                <span class="marquee-logo">Enterprise</span>
+                <span class="marquee-logo">Verizon</span>
+                <span class="marquee-logo">Marriott</span>
+                <span class="marquee-logo">Nike</span>
+                <span class="marquee-logo">Lowe's</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: How to Verify -->
+    <section class="verify-section">
+        <div class="verify-inner">
+            <div class="verify-content">
+                <h2>Simple Verification, Instant Savings</h2>
+                <p>Most military discounts require verification of your service. Here's how easy it is to unlock your savings.</p>
+                <div class="verify-steps">
+                    <div class="verify-step">
+                        <div class="step-number">1</div>
+                        <div class="step-text">
+                            <h4>Find Your Discount</h4>
+                            <p>Browse our verified discounts by brand or category</p>
+                        </div>
+                    </div>
+                    <div class="verify-step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">
+                            <h4>Verify Your Status</h4>
+                            <p>Quick verification through ID.me, SheerID, or show your military ID</p>
+                        </div>
+                    </div>
+                    <div class="verify-step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">
+                            <h4>Start Saving</h4>
+                            <p>Enjoy instant discounts online and in-store</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="verify-visual">
+                <div class="verify-card">
+                    <div class="verify-card-header">
+                        <div class="verify-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div>
+                            <h3>Verification Partners</h3>
+                            <p>Trusted by thousands of retailers</p>
+                        </div>
+                    </div>
+                    <div class="verify-providers" id="verify-providers">
+                        <div class="provider-badge">ID.me</div>
+                        <div class="provider-badge">SheerID</div>
+                        <div class="provider-badge">Troop ID</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Featured Discounts (DYNAMIC) -->
+    <section class="featured-section">
+        <div class="section-header">
+            <div>
+                <h2>Featured Discounts</h2>
+                <p>Editor's picks for the best military discounts this week</p>
+            </div>
+            <a href="/deals-discounts/featured/" class="view-all-link">
+                View All Featured
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+        </div>
+        <div id="featured-discounts-grid" class="discount-grid">
+            <!-- JS populates; fallback below -->
+            <article class="discount-card">
+                <div class="discount-card-header">
+                    <div class="discount-brand">
+                        <div class="brand-logo">HD</div>
+                        <div class="brand-info"><h3>Home Depot</h3><span>Home & Garden</span></div>
+                    </div>
+                    <div class="discount-badge">10% OFF</div>
+                </div>
+                <div class="discount-card-body">
+                    <h3 class="discount-title">Military Discount on All Purchases</h3>
+                    <div class="discount-meta">
+                        <span class="meta-tag">📍 In-Store & Online</span>
+                        <span class="meta-tag">🕐 Ongoing</span>
+                    </div>
+                    <div class="discount-eligibility">
+                        <span class="eligibility-badge">Active Duty</span>
+                        <span class="eligibility-badge">Veterans</span>
+                        <span class="eligibility-badge">Retirees</span>
+                    </div>
+                </div>
+                <div class="discount-card-footer">
+                    <a href="#" class="card-link">View Details →</a>
+                    <span class="verified-tag">✓ Verified</span>
+                </div>
+            </article>
+            <article class="discount-card">
+                <div class="discount-card-header">
+                    <div class="discount-brand">
+                        <div class="brand-logo">SW</div>
+                        <div class="brand-info"><h3>Southwest Airlines</h3><span>Travel & Hotels</span></div>
+                    </div>
+                    <div class="discount-badge">FREE BAGS</div>
+                </div>
+                <div class="discount-card-body">
+                    <h3 class="discount-title">Free Checked Bags + Priority Boarding</h3>
+                    <div class="discount-meta">
+                        <span class="meta-tag">🌐 Online</span>
+                        <span class="meta-tag">🕐 Ongoing</span>
+                    </div>
+                    <div class="discount-eligibility">
+                        <span class="eligibility-badge">Active Duty</span>
+                        <span class="eligibility-badge">Dependents</span>
+                    </div>
+                </div>
+                <div class="discount-card-footer">
+                    <a href="#" class="card-link">View Details →</a>
+                    <span class="verified-tag">✓ Verified</span>
+                </div>
+            </article>
+            <article class="discount-card">
+                <div class="discount-card-header">
+                    <div class="discount-brand">
+                        <div class="brand-logo">VZ</div>
+                        <div class="brand-info"><h3>Verizon</h3><span>Technology</span></div>
+                    </div>
+                    <div class="discount-badge">$25/MO OFF</div>
+                </div>
+                <div class="discount-card-body">
+                    <h3 class="discount-title">Military & Veteran Unlimited Plans</h3>
+                    <div class="discount-meta">
+                        <span class="meta-tag">📍 In-Store & Online</span>
+                        <span class="meta-tag">🕐 Ongoing</span>
+                    </div>
+                    <div class="discount-eligibility">
+                        <span class="eligibility-badge">All Military</span>
+                        <span class="eligibility-badge">Spouses</span>
+                    </div>
+                </div>
+                <div class="discount-card-footer">
+                    <a href="#" class="card-link">View Details →</a>
+                    <span class="verified-tag">✓ Verified</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Section 6: Browse by Category (DYNAMIC) -->
+    <section class="category-section">
+        <div class="section-header">
+            <div>
+                <h2>Browse by Category</h2>
+                <p>Find discounts in your favorite shopping categories</p>
+            </div>
+            <a href="/deals-discounts/categories/" class="view-all-link">View All Categories →</a>
+        </div>
+        <div id="category-grid" class="category-grid">
+            <!-- JS populates; fallback below -->
+            <div class="category-card"><div class="category-icon">🛍️</div><h3>Retail & Shopping</h3><span class="category-count">324 discounts</span></div>
+            <div class="category-card"><div class="category-icon">✈️</div><h3>Travel & Hotels</h3><span class="category-count">186 discounts</span></div>
+            <div class="category-card"><div class="category-icon">🍽️</div><h3>Restaurants & Food</h3><span class="category-count">247 discounts</span></div>
+            <div class="category-card"><div class="category-icon">🎬</div><h3>Entertainment</h3><span class="category-count">156 discounts</span></div>
+            <div class="category-card"><div class="category-icon">💻</div><h3>Technology</h3><span class="category-count">198 discounts</span></div>
+            <div class="category-card"><div class="category-icon">🚗</div><h3>Auto & Transport</h3><span class="category-count">134 discounts</span></div>
+            <div class="category-card"><div class="category-icon">🏠</div><h3>Home & Garden</h3><span class="category-count">212 discounts</span></div>
+            <div class="category-card"><div class="category-icon">💪</div><h3>Health & Wellness</h3><span class="category-count">167 discounts</span></div>
+        </div>
+    </section>
+
+    <!-- Section 7: Browse by Brand (DYNAMIC) -->
+    <section class="brand-section">
+        <div class="section-header">
+            <div>
+                <h2>Popular Brands</h2>
+                <p>Shop military discounts from your favorite retailers</p>
+            </div>
+            <a href="/deals-discounts/brands/" class="view-all-link">View Brand Directory →</a>
+        </div>
+        <div id="popular-brands-grid" class="popular-brands">
+            <!-- JS populates; fallback below -->
+            <div class="brand-card"><div class="brand-card-logo">🎯</div><h4>Target</h4><span>12 discounts</span></div>
+            <div class="brand-card"><div class="brand-card-logo">🍎</div><h4>Apple</h4><span>8 discounts</span></div>
+            <div class="brand-card"><div class="brand-card-logo">👟</div><h4>Nike</h4><span>6 discounts</span></div>
+            <div class="brand-card"><div class="brand-card-logo">🏨</div><h4>Marriott</h4><span>15 discounts</span></div>
+            <div class="brand-card"><div class="brand-card-logo">🔧</div><h4>Lowe's</h4><span>4 discounts</span></div>
+            <div class="brand-card"><div class="brand-card-logo">☕</div><h4>Starbucks</h4><span>3 discounts</span></div>
+        </div>
+        <div class="az-links">
+            <a href="/deals-discounts/brands/#A" class="az-link">A</a><a href="/deals-discounts/brands/#B" class="az-link">B</a><a href="/deals-discounts/brands/#C" class="az-link">C</a><a href="/deals-discounts/brands/#D" class="az-link">D</a><a href="/deals-discounts/brands/#E" class="az-link">E</a><a href="/deals-discounts/brands/#F" class="az-link">F</a><a href="/deals-discounts/brands/#G" class="az-link">G</a><a href="/deals-discounts/brands/#H" class="az-link">H</a><a href="/deals-discounts/brands/#I" class="az-link">I</a><a href="/deals-discounts/brands/#J" class="az-link">J</a><a href="/deals-discounts/brands/#K" class="az-link">K</a><a href="/deals-discounts/brands/#L" class="az-link">L</a><a href="/deals-discounts/brands/#M" class="az-link">M</a><a href="/deals-discounts/brands/#N" class="az-link">N</a><a href="/deals-discounts/brands/#O" class="az-link">O</a><a href="/deals-discounts/brands/#P" class="az-link">P</a><a href="/deals-discounts/brands/#Q" class="az-link">Q</a><a href="/deals-discounts/brands/#R" class="az-link">R</a><a href="/deals-discounts/brands/#S" class="az-link">S</a><a href="/deals-discounts/brands/#T" class="az-link">T</a><a href="/deals-discounts/brands/#U" class="az-link">U</a><a href="/deals-discounts/brands/#V" class="az-link">V</a><a href="/deals-discounts/brands/#W" class="az-link">W</a><a href="/deals-discounts/brands/#X" class="az-link">X</a><a href="/deals-discounts/brands/#Y" class="az-link">Y</a><a href="/deals-discounts/brands/#Z" class="az-link">Z</a>
+        </div>
+    </section>
+
+    <!-- Section 8: Seasonal Deals -->
+    <section class="seasonal-section">
+        <div class="seasonal-inner">
+            <div class="seasonal-header">
+                <div class="seasonal-badge">🔥 <span>Limited Time Offer</span></div>
+                <h2>Presidents' Day Sale</h2>
+                <p>Extra savings from brands that honor your service</p>
+                <div class="seasonal-countdown" id="countdown">
+                    <div class="countdown-item"><div class="countdown-number" id="cd-days">03</div><div class="countdown-label">Days</div></div>
+                    <div class="countdown-item"><div class="countdown-number" id="cd-hours">14</div><div class="countdown-label">Hours</div></div>
+                    <div class="countdown-item"><div class="countdown-number" id="cd-mins">28</div><div class="countdown-label">Mins</div></div>
+                    <div class="countdown-item"><div class="countdown-number" id="cd-secs">45</div><div class="countdown-label">Secs</div></div>
+                </div>
+            </div>
+            <div class="seasonal-grid">
+                <div class="seasonal-card"><div class="seasonal-card-body"><h3>Mattress Firm</h3><p>Extra 15% off on top of military discount</p><div class="seasonal-amount">Up to 25% Off</div></div></div>
+                <div class="seasonal-card"><div class="seasonal-card-body"><h3>Best Buy</h3><p>Presidents' Day appliance sale + military savings</p><div class="seasonal-amount">Up to $500 Off</div></div></div>
+                <div class="seasonal-card"><div class="seasonal-card-body"><h3>Ashley Furniture</h3><p>Storewide savings for military families</p><div class="seasonal-amount">30% Off</div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Military Family Deals -->
+    <section class="audience-deals family">
+        <div class="audience-inner">
+            <div class="audience-content">
+                <h2>Military Family Discounts</h2>
+                <p>Special savings for military spouses and dependents. Because the whole family serves.</p>
+                <a href="/deals-discounts/military-families/" class="btn btn-secondary">Explore Family Deals →</a>
+            </div>
+            <div class="audience-cards">
+                <div class="audience-card"><div class="audience-card-header"><h4>USAA Insurance</h4><span class="audience-card-discount">Save $500+</span></div><p>Exclusive rates for military families on auto & home</p></div>
+                <div class="audience-card"><div class="audience-card-header"><h4>Great Wolf Lodge</h4><span class="audience-card-discount">20% Off</span></div><p>Family vacation discount for military dependents</p></div>
+                <div class="audience-card"><div class="audience-card-header"><h4>Tutor.com</h4><span class="audience-card-discount">FREE</span></div><p>Free tutoring for military children K-12</p></div>
+                <div class="audience-card"><div class="audience-card-header"><h4>Sprint/T-Mobile</h4><span class="audience-card-discount">50% Off</span></div><p>Family plan discounts for military households</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Veteran Discounts -->
+    <section class="audience-deals veterans">
+        <div class="audience-inner">
+            <div class="audience-cards">
+                <div class="audience-card"><div class="audience-card-header"><h4>Lowe's</h4><span class="audience-card-discount">10% Off</span></div><p>Everyday discount for veterans with ID verification</p></div>
+                <div class="audience-card"><div class="audience-card-header"><h4>National Parks</h4><span class="audience-card-discount">FREE Pass</span></div><p>Lifetime access to all national parks & refuges</p></div>
+                <div class="audience-card"><div class="audience-card-header"><h4>Amtrak</h4><span class="audience-card-discount">10% Off</span></div><p>Veteran discount on train travel nationwide</p></div>
+                <div class="audience-card"><div class="audience-card-header"><h4>Walgreens</h4><span class="audience-card-discount">20% Off</span></div><p>Veterans Day discount + year-round savings</p></div>
+            </div>
+            <div class="audience-content">
+                <h2>Veteran-Exclusive Savings</h2>
+                <p>Thank you for your service. These brands offer special year-round discounts exclusively for veterans.</p>
+                <a href="/deals-discounts/veterans/" class="btn btn-secondary">Explore Veteran Deals →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 11: State Discounts (DYNAMIC) -->
+    <section class="state-section">
+        <div class="state-inner">
+            <div class="state-header">
+                <h2>Discounts by State</h2>
+                <p>Find local military discounts near you</p>
+            </div>
+            <div class="state-map">
+                <div class="map-placeholder">🗺️</div>
+                <p class="map-text">Click a state to explore local military discounts</p>
+            </div>
+            <div id="state-grid" class="state-grid">
+                <!-- JS populates; fallback below -->
+                <a href="#" class="state-chip">Texas</a>
+                <a href="#" class="state-chip">California</a>
+                <a href="#" class="state-chip">Florida</a>
+                <a href="#" class="state-chip">Virginia</a>
+                <a href="#" class="state-chip">North Carolina</a>
+                <a href="#" class="state-chip">Georgia</a>
+                <a href="#" class="state-chip">Washington</a>
+                <a href="#" class="state-chip">Colorado</a>
+                <a href="#" class="state-chip">Arizona</a>
+                <a href="#" class="state-chip">Hawaii</a>
+                <a href="#" class="state-chip">Alaska</a>
+                <a href="#" class="state-chip">View All States →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 12: Recently Added (DYNAMIC) -->
+    <section class="recent-section">
+        <div class="section-header">
+            <div>
+                <h2>Recently Added</h2>
+                <p>Fresh discounts added to our database</p>
+            </div>
+            <a href="/deals-discounts/new/" class="view-all-link">View All New →</a>
+        </div>
+        <div id="recent-list" class="recent-list">
+            <!-- JS populates; fallback below -->
+            <div class="recent-item">
+                <div class="recent-date"><div class="recent-date-day">24</div><div class="recent-date-month">Jan</div></div>
+                <div class="recent-logo">CB</div>
+                <div class="recent-info"><h4>Crate & Barrel</h4><p>New military discount on furniture and home decor</p></div>
+                <div class="recent-amount">15% Off</div>
+            </div>
+            <div class="recent-item">
+                <div class="recent-date"><div class="recent-date-day">23</div><div class="recent-date-month">Jan</div></div>
+                <div class="recent-logo">AD</div>
+                <div class="recent-info"><h4>Adidas</h4><p>Extended military discount to include veterans</p></div>
+                <div class="recent-amount">30% Off</div>
+            </div>
+            <div class="recent-item">
+                <div class="recent-date"><div class="recent-date-day">22</div><div class="recent-date-month">Jan</div></div>
+                <div class="recent-logo">DP</div>
+                <div class="recent-info"><h4>DoorDash</h4><p>New DashPass discount for military members</p></div>
+                <div class="recent-amount">50% Off</div>
+            </div>
+            <div class="recent-item">
+                <div class="recent-date"><div class="recent-date-day">21</div><div class="recent-date-month">Jan</div></div>
+                <div class="recent-logo">RH</div>
+                <div class="recent-info"><h4>Restoration Hardware</h4><p>Military appreciation program now available</p></div>
+                <div class="recent-amount">25% Off</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 13: FAQ (DYNAMIC) -->
+    <section class="faq-section">
+        <div class="faq-inner">
+            <div class="faq-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about military discounts</p>
+            </div>
+            <div id="faq-list" class="faq-list">
+                <!-- JS populates; fallback below -->
+                <div class="faq-item open">
+                    <div class="faq-question"><h3>Who qualifies for military discounts?</h3><div class="faq-icon">+</div></div>
+                    <div class="faq-answer">Military discounts are typically available to active duty service members, veterans, retirees, National Guard, Reserves, and often military spouses and dependents. Eligibility varies by retailer, so we always list specific requirements on each discount page.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><h3>How do I verify my military status?</h3><div class="faq-icon">+</div></div>
+                    <div class="faq-answer">Most retailers use verification services like ID.me or SheerID. You'll create a free account and verify your status once, then discounts are automatically applied. Some stores also accept military IDs in person.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><h3>Can I use multiple discounts at once?</h3><div class="faq-icon">+</div></div>
+                    <div class="faq-answer">It depends on the retailer. Some military discounts can be "stacked" with sales and coupons, while others cannot. We indicate whether a discount is stackable on each listing.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><h3>Are these discounts verified?</h3><div class="faq-icon">+</div></div>
+                    <div class="faq-answer">Yes! Our team verifies every discount before listing it and regularly checks for accuracy. We also rely on community feedback to keep our database current. Look for the "Verified" badge on each listing.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><h3>How do I submit a discount I found?</h3><div class="faq-icon">+</div></div>
+                    <div class="faq-answer">We love community contributions! Click the "Submit a Discount" button in the navigation or at the bottom of this page. Fill out the simple form with the discount details and we'll verify and add it within 48 hours.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 14: Blog -->
+    <section class="blog-section">
+        <div class="section-header">
+            <div>
+                <h2>Latest from the Blog</h2>
+                <p>Tips, guides, and news for military families</p>
+            </div>
+            <a href="/blog/" class="view-all-link">View All Articles →</a>
+        </div>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-image">📱</div>
+                <div class="blog-body">
+                    <span class="blog-category">Guides</span>
+                    <h3>Complete Guide to ID.me Military Verification</h3>
+                    <p class="blog-excerpt">Step-by-step instructions to set up ID.me and unlock thousands of discounts...</p>
+                    <div class="blog-meta"><span>Jan 20, 2025</span><span>5 min read</span></div>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-image">🚚</div>
+                <div class="blog-body">
+                    <span class="blog-category">PCS</span>
+                    <h3>Best Military Discounts for Your PCS Move</h3>
+                    <p class="blog-excerpt">Save big on your next move with these exclusive military moving discounts...</p>
+                    <div class="blog-meta"><span>Jan 18, 2025</span><span>7 min read</span></div>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-image">💰</div>
+                <div class="blog-body">
+                    <span class="blog-category">Tips</span>
+                    <h3>Top 10 Military Discounts You're Probably Missing</h3>
+                    <p class="blog-excerpt">These lesser-known discounts could save your family hundreds each year...</p>
+                    <div class="blog-meta"><span>Jan 15, 2025</span><span>4 min read</span></div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Section 15: Newsletter -->
+    <section class="newsletter-section">
+        <div class="newsletter-inner">
+            <h2>Never Miss a Deal</h2>
+            <p>Get the best military discounts delivered to your inbox weekly</p>
+            <form class="newsletter-form" onsubmit="return false;">
+                <input type="email" placeholder="Enter your email address">
+                <button type="submit">Subscribe Free</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Section 16: Submit Discount -->
+    <section class="submit-section">
+        <div class="submit-inner">
+            <div class="submit-content">
+                <h2>Know a Discount We're Missing?</h2>
+                <p>Help fellow military families save by sharing discounts you've discovered. Our community contributions keep this database growing.</p>
+                <div class="submit-benefits">
+                    <div class="benefit-item"><div class="benefit-icon">✓</div><span>Quick 2-minute submission form</span></div>
+                    <div class="benefit-item"><div class="benefit-icon">✓</div><span>Our team verifies within 48 hours</span></div>
+                    <div class="benefit-item"><div class="benefit-icon">✓</div><span>Get credit for your contribution</span></div>
+                </div>
+                <a href="/submit-discount/" class="submit-btn">Submit a Discount →</a>
+            </div>
+            <div class="submit-visual">
+                <div class="submit-stats">
+                    <div class="stat-item"><div class="stat-number">847</div><div class="stat-label">Community Submissions</div></div>
+                    <div class="stat-item"><div class="stat-number">92%</div><div class="stat-label">Approval Rate</div></div>
+                    <div class="stat-item"><div class="stat-number">24hr</div><div class="stat-label">Avg Review Time</div></div>
+                    <div class="stat-item"><div class="stat-number">$2.4M</div><div class="stat-label">Saved from Tips</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <div class="footer-logo-icon">MM</div>
+                <span>MyMilitaryLifestyle</span>
+            </div>
+            <div class="footer-links">
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+                <a href="/privacy/">Privacy</a>
+                <a href="/terms/">Terms</a>
+            </div>
+            <div class="footer-copyright">© 2025 MyMilitaryLifestyle. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        'use strict';
+
+        const API = '/api';
+        const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+        // --- Helpers ---
+
+        async function fetchAPI(path) {
+            try {
+                const res = await fetch(API + path);
+                if (!res.ok) throw new Error(res.status);
+                return await res.json();
+            } catch (e) {
+                console.warn('API fetch failed:', path, e);
+                return null;
+            }
+        }
+
+        function initials(name) {
+            if (!name) return '??';
+            return name.split(/\s+/).map(w => w[0]).join('').substring(0, 2).toUpperCase();
+        }
+
+        function locationLabel(loc) {
+            if (!loc) return '📍 In-Store & Online';
+            switch (loc) {
+                case 'Online': return '🌐 Online';
+                case 'In-Store': return '📍 In-Store';
+                default: return '📍 In-Store & Online';
+            }
+        }
+
+        function expirationLabel(date) {
+            if (!date) return '🕐 Ongoing';
+            const d = new Date(date);
+            if (d < new Date()) return '🕐 Expired';
+            return '🕐 Expires ' + MONTHS[d.getMonth()] + ' ' + d.getDate();
+        }
+
+        // --- Render: Featured Discounts ---
+
+        function renderFeaturedDiscounts(data) {
+            if (!data || !data.data || data.data.length === 0) return;
+            const grid = document.getElementById('featured-discounts-grid');
+            grid.innerHTML = data.data.map(d => {
+                const brand = d.brand || {};
+                const cats = d.discount_categories || [];
+                const elig = d.eligibilities || [];
+                const catName = cats.length > 0 ? cats[0].name : '';
+                const brandSlug = brand.slug || '';
+                const discountSlug = d.slug || '';
+                const href = '/deals-discounts/brands/' + brandSlug + '/' + discountSlug + '/';
+
+                return `<article class="discount-card">
+                    <div class="discount-card-header">
+                        <div class="discount-brand">
+                            <div class="brand-logo">${initials(brand.name)}</div>
+                            <div class="brand-info"><h3>${brand.name || 'Brand'}</h3><span>${catName}</span></div>
+                        </div>
+                        ${d.amount ? `<div class="discount-badge">${d.amount}</div>` : ''}
+                    </div>
+                    <div class="discount-card-body">
+                        <h3 class="discount-title">${d.title}</h3>
+                        <div class="discount-meta">
+                            <span class="meta-tag">${locationLabel(d.location)}</span>
+                            <span class="meta-tag">${expirationLabel(d.expiration)}</span>
+                        </div>
+                        <div class="discount-eligibility">
+                            ${elig.map(e => `<span class="eligibility-badge">${e.name}</span>`).join('')}
+                        </div>
+                    </div>
+                    <div class="discount-card-footer">
+                        <a href="${href}" class="card-link">View Details →</a>
+                        <span class="verified-tag">✓ Verified</span>
+                    </div>
+                </article>`;
+            }).join('');
+        }
+
+        // --- Render: Categories ---
+
+        function renderCategories(data) {
+            if (!data || !data.data || data.data.length === 0) return;
+            const grid = document.getElementById('category-grid');
+            const defaultIcons = ['🛍️','✈️','🍽️','🎬','💻','🚗','🏠','💪','🎓','💰','👨‍👩‍👧','🐾'];
+            grid.innerHTML = data.data.map((cat, i) => {
+                const icon = cat.icon || defaultIcons[i % defaultIcons.length];
+                const count = cat.discounts ? cat.discounts.length : 0;
+                return `<div class="category-card" onclick="location.href='/deals-discounts/category/${cat.slug || ''}'">
+                    <div class="category-icon">${icon}</div>
+                    <h3>${cat.name}</h3>
+                    <span class="category-count">${count} discount${count !== 1 ? 's' : ''}</span>
+                </div>`;
+            }).join('');
+        }
+
+        // --- Render: Popular Brands ---
+
+        function renderBrands(data) {
+            if (!data || !data.data || data.data.length === 0) return;
+            const grid = document.getElementById('popular-brands-grid');
+            grid.innerHTML = data.data.map(b => {
+                const count = b.discounts ? b.discounts.length : 0;
+                return `<div class="brand-card" onclick="location.href='/deals-discounts/brands/${b.slug || ''}'">
+                    <div class="brand-card-logo">${initials(b.name)}</div>
+                    <h4>${b.name}</h4>
+                    <span>${count} discount${count !== 1 ? 's' : ''}</span>
+                </div>`;
+            }).join('');
+        }
+
+        // --- Render: States ---
+
+        function renderStates(data) {
+            if (!data || !data.data || data.data.length === 0) return;
+            const grid = document.getElementById('state-grid');
+            grid.innerHTML = data.data.map(s => {
+                return `<a href="/deals-discounts/state/${s.abbreviation ? s.abbreviation.toLowerCase() : ''}" class="state-chip">${s.name}</a>`;
+            }).join('') + '<a href="/deals-discounts/states/" class="state-chip">View All States →</a>';
+        }
+
+        // --- Render: Recently Added ---
+
+        function renderRecent(data) {
+            if (!data || !data.data || data.data.length === 0) return;
+            const list = document.getElementById('recent-list');
+            list.innerHTML = data.data.map(d => {
+                const date = new Date(d.createdAt);
+                const day = date.getDate();
+                const month = MONTHS[date.getMonth()];
+                const brand = d.brand || {};
+                const brandSlug = brand.slug || '';
+                const discountSlug = d.slug || '';
+                const href = '/deals-discounts/brands/' + brandSlug + '/' + discountSlug + '/';
+
+                return `<a href="${href}" class="recent-item" style="text-decoration:none;color:inherit;">
+                    <div class="recent-date">
+                        <div class="recent-date-day">${day}</div>
+                        <div class="recent-date-month">${month}</div>
+                    </div>
+                    <div class="recent-logo">${initials(brand.name)}</div>
+                    <div class="recent-info">
+                        <h4>${brand.name || 'Brand'}</h4>
+                        <p>${d.title}</p>
+                    </div>
+                    ${d.amount ? `<div class="recent-amount">${d.amount}</div>` : ''}
+                </a>`;
+            }).join('');
+        }
+
+        // --- Render: FAQ ---
+
+        function renderFAQ(data) {
+            if (!data || !data.data) return;
+            const hub = data.data;
+            const faqItems = hub.faq;
+            if (!faqItems || faqItems.length === 0) return;
+
+            const list = document.getElementById('faq-list');
+            list.innerHTML = faqItems.map((item, i) => {
+                return `<div class="faq-item${i === 0 ? ' open' : ''}">
+                    <div class="faq-question">
+                        <h3>${item.question}</h3>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">${item.answer}</div>
+                </div>`;
+            }).join('');
+
+            bindFAQAccordion();
+        }
+
+        // --- Render: Metrics from API counts ---
+
+        function renderMetrics(discountData, brandData) {
+            if (discountData && discountData.meta && discountData.meta.pagination) {
+                const total = discountData.meta.pagination.total;
+                if (total > 0) {
+                    document.getElementById('metric-discounts').innerHTML =
+                        total.toLocaleString() + '<span>+</span>';
+                }
+            }
+            if (brandData && brandData.meta && brandData.meta.pagination) {
+                const total = brandData.meta.pagination.total;
+                if (total > 0) {
+                    document.getElementById('metric-brands').innerHTML =
+                        total.toLocaleString() + '<span>+</span>';
+                }
+            }
+        }
+
+        // --- Interactive: FAQ Accordion ---
+
+        function bindFAQAccordion() {
+            document.querySelectorAll('.faq-question').forEach(function(question) {
+                question.addEventListener('click', function() {
+                    var item = question.parentElement;
+                    document.querySelectorAll('.faq-item').forEach(function(faq) {
+                        if (faq !== item) faq.classList.remove('open');
+                    });
+                    item.classList.toggle('open');
+                });
+            });
+        }
+
+        // --- Interactive: Audience Tags ---
+
+        function bindAudienceTags() {
+            document.querySelectorAll('.audience-tag').forEach(function(tag) {
+                tag.addEventListener('click', function() {
+                    document.querySelectorAll('.audience-tag').forEach(function(t) {
+                        t.classList.remove('active');
+                    });
+                    tag.classList.add('active');
+                });
+            });
+        }
+
+        // --- Interactive: Countdown Timer ---
+
+        function startCountdown() {
+            // Set target to 3 days from now for demo
+            var target = new Date();
+            target.setDate(target.getDate() + 3);
+            target.setHours(23, 59, 59, 0);
+
+            function update() {
+                var now = new Date();
+                var diff = target - now;
+                if (diff <= 0) { diff = 0; }
+
+                var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                var secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+                var dEl = document.getElementById('cd-days');
+                var hEl = document.getElementById('cd-hours');
+                var mEl = document.getElementById('cd-mins');
+                var sEl = document.getElementById('cd-secs');
+
+                if (dEl) dEl.textContent = String(days).padStart(2, '0');
+                if (hEl) hEl.textContent = String(hours).padStart(2, '0');
+                if (mEl) mEl.textContent = String(mins).padStart(2, '0');
+                if (sEl) sEl.textContent = String(secs).padStart(2, '0');
+            }
+
+            update();
+            setInterval(update, 1000);
+        }
+
+        // --- Boot ---
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Bind static interactions immediately
+            bindFAQAccordion();
+            bindAudienceTags();
+            startCountdown();
+
+            // Fetch all dynamic data in parallel
+            Promise.allSettled([
+                fetchAPI('/discounts?filters[isFeatured][$eq]=true&populate=brand,eligibilities,discount_categories&pagination[limit]=6'),
+                fetchAPI('/discount-categories?populate=discounts&pagination[limit]=8'),
+                fetchAPI('/brands?filters[isFeatured][$eq]=true&populate=discounts&pagination[limit]=6'),
+                fetchAPI('/states?pagination[limit]=12&sort=name:asc'),
+                fetchAPI('/discounts?sort=createdAt:desc&populate=brand&pagination[limit]=4'),
+                fetchAPI('/deals-hub?populate=faq,seo'),
+                fetchAPI('/discounts?pagination[limit]=1'),  // total discount count
+                fetchAPI('/brands?pagination[limit]=1')       // total brand count
+            ]).then(function(results) {
+                var featured    = results[0].status === 'fulfilled' ? results[0].value : null;
+                var categories  = results[1].status === 'fulfilled' ? results[1].value : null;
+                var brands      = results[2].status === 'fulfilled' ? results[2].value : null;
+                var states      = results[3].status === 'fulfilled' ? results[3].value : null;
+                var recent      = results[4].status === 'fulfilled' ? results[4].value : null;
+                var hub         = results[5].status === 'fulfilled' ? results[5].value : null;
+                var discountCnt = results[6].status === 'fulfilled' ? results[6].value : null;
+                var brandCnt    = results[7].status === 'fulfilled' ? results[7].value : null;
+
+                renderFeaturedDiscounts(featured);
+                renderCategories(categories);
+                renderBrands(brands);
+                renderStates(states);
+                renderRecent(recent);
+                renderFAQ(hub);
+                renderMetrics(discountCnt, brandCnt);
+            });
+        });
+    })();
+    </script>
+</body>
+</html>

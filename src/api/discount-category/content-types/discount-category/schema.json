@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "discount_categories",
+  "info": {
+    "singularName": "discount-category",
+    "pluralName": "discount-categories",
+    "displayName": "Discount Category",
+    "description": "Categories for brands and discounts"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "brands": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::brand.brand",
+      "mappedBy": "discount_categories"
+    },
+    "discounts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::discount.discount",
+      "mappedBy": "discount_categories"
+    }
+  }
+}

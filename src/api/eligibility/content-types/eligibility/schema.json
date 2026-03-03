@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eligibilities",
+  "info": {
+    "singularName": "eligibility",
+    "pluralName": "eligibilities",
+    "displayName": "Eligibility",
+    "description": "Military status eligibility groups"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "discounts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::discount.discount",
+      "mappedBy": "eligibilities"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_deals_faq_items",
+  "info": {
+    "name": "FaqItem",
+    "icon": "question",
+    "displayName": "FAQ Item",
+    "description": "Question and answer pair for FAQ sections"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
