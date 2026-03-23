@@ -1,0 +1,127 @@
+.home {
+  min-height: calc(100vh - 64px);
+}
+
+.home__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Hero */
+.home__hero {
+  padding: 48px 0 40px;
+  text-align: center;
+}
+
+.home__title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--mml-primary);
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.home__subtitle {
+  font-size: 15px;
+  color: var(--mml-text-muted);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Article Grid */
+.home__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding-bottom: 64px;
+}
+
+@media (min-width: 640px) {
+  .home__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .home__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Empty */
+.home__empty {
+  text-align: center;
+  padding: 64px 24px;
+  color: var(--mml-text-muted);
+}
+
+/* Error */
+.home__error {
+  text-align: center;
+  padding: 64px 24px;
+}
+
+.home__error h2 {
+  color: var(--mml-text);
+  margin-bottom: 12px;
+}
+
+.home__error p {
+  color: var(--mml-text-muted);
+  margin-bottom: 8px;
+}
+
+.home__error code {
+  background: var(--mml-bg-light);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.home__error-detail {
+  font-size: 12px;
+  color: #dc3545;
+}
+
+/* Skeleton Loading */
+.skeleton-card {
+  border-radius: var(--mml-radius);
+  overflow: hidden;
+  background: var(--mml-white);
+  box-shadow: var(--mml-shadow-sm);
+}
+
+.skeleton-card__image {
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(110deg, #f0f0f0 25%, #e8e8e8 37%, #f0f0f0 63%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+.skeleton-card__content {
+  padding: 16px;
+}
+
+.skeleton-card__line {
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(110deg, #f0f0f0 25%, #e8e8e8 37%, #f0f0f0 63%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+  margin-bottom: 10px;
+}
+
+.skeleton-card__line--title {
+  height: 16px;
+  width: 80%;
+}
+
+.skeleton-card__line--short {
+  width: 50%;
+}
+
+@keyframes skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

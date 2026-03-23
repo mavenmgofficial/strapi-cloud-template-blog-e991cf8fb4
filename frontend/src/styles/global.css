@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  /* Colors */
+  --mml-primary: #587478;
+  --mml-accent: #0D6EFD;
+  --mml-cta: #FB7023;
+  --mml-white: #FFFFFF;
+  --mml-text: #010F1C;
+  --mml-text-muted: #6c757d;
+  --mml-bg: #FFFFFF;
+  --mml-bg-light: #F8F9FA;
+
+  /* Typography */
+  --mml-font-primary: 'Plus Jakarta Sans', sans-serif;
+  --mml-font-secondary: 'Poppins', sans-serif;
+
+  /* Spacing */
+  --mml-space-unit: 4px;
+  --mml-radius: 10px;
+  --mml-radius-pill: 50px;
+
+  /* Shadows */
+  --mml-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --mml-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --mml-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--mml-font-primary);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--mml-text);
+  background: var(--mml-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--mml-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #0B5ED7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--mml-font-primary);
+  line-height: 1.3;
+}
+
+h1 { font-size: 20px; font-weight: 700; }
+h2 { font-size: 20px; font-weight: 600; }
+h3 { font-size: 16px; font-weight: 600; }
+h4 { font-size: 14px; font-weight: 600; }
+h5 { font-size: 12px; font-weight: 500; }
+h6 { font-size: 12px; font-weight: 500; }

@@ -1,0 +1,253 @@
+.article-page {
+  min-height: calc(100vh - 64px);
+  padding-bottom: 64px;
+}
+
+.article-page__container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Breadcrumbs */
+.article__breadcrumb {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--mml-text-muted);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 24px;
+}
+
+.article__breadcrumb:hover {
+  color: var(--mml-accent);
+}
+
+.article__breadcrumb-sep {
+  font-size: 12px;
+  color: var(--mml-text-muted);
+  margin: 0 6px;
+}
+
+/* Header */
+.article__header {
+  padding: 32px 0 24px;
+}
+
+.article__category-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(88, 116, 120, 0.1);
+  color: var(--mml-primary);
+  margin-bottom: 12px;
+}
+
+.article__title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--mml-text);
+  line-height: 1.2;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.article__description {
+  font-size: 16px;
+  color: var(--mml-text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.article__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.article__author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.article__author-name {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mml-text);
+}
+
+.article__date {
+  display: block;
+  font-size: 12px;
+  color: var(--mml-text-muted);
+}
+
+/* Cover Image */
+.article__cover {
+  border-radius: var(--mml-radius);
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.article__cover img {
+  width: 100%;
+  display: block;
+}
+
+/* Body Content */
+.article__body {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--mml-text);
+}
+
+.article__rich-text {
+  margin-bottom: 24px;
+}
+
+.article__rich-text p {
+  margin-bottom: 16px;
+}
+
+.article__rich-text h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 32px 0 12px;
+}
+
+.article__rich-text h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 24px 0 8px;
+}
+
+.article__rich-text ul,
+.article__rich-text ol {
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+
+.article__rich-text a {
+  color: var(--mml-accent);
+  text-decoration: underline;
+}
+
+.article__quote {
+  margin: 28px 0;
+  padding: 20px 24px;
+  border-left: 4px solid var(--mml-cta);
+  background: var(--mml-bg-light);
+  border-radius: 0 var(--mml-radius) var(--mml-radius) 0;
+}
+
+.article__quote-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--mml-text);
+}
+
+.article__quote p {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--mml-text-muted);
+}
+
+.article__media {
+  margin: 28px 0;
+  border-radius: var(--mml-radius);
+  overflow: hidden;
+}
+
+.article__media img {
+  width: 100%;
+  display: block;
+}
+
+.article__slider {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  margin: 28px 0;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.article__slider img {
+  height: 280px;
+  border-radius: var(--mml-radius);
+  flex-shrink: 0;
+}
+
+/* Not Found */
+.article__not-found {
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.article__not-found h2 {
+  margin-bottom: 8px;
+}
+
+.article__not-found p {
+  color: var(--mml-text-muted);
+  margin-bottom: 20px;
+}
+
+.article__back-link {
+  display: inline-block;
+  background: var(--mml-cta);
+  color: var(--mml-white);
+  padding: 10px 24px;
+  border-radius: var(--mml-radius-pill);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.article__back-link:hover {
+  opacity: 0.9;
+  color: var(--mml-white);
+}
+
+/* Skeleton */
+.article__skeleton {
+  padding-top: 48px;
+}
+
+.skeleton-block {
+  height: 16px;
+  border-radius: 8px;
+  background: linear-gradient(110deg, #f0f0f0 25%, #e8e8e8 37%, #f0f0f0 63%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+  margin-bottom: 16px;
+}
+
+.skeleton-block--title {
+  height: 32px;
+  width: 70%;
+}
+
+.skeleton-block--meta {
+  height: 14px;
+  width: 40%;
+}
+
+.skeleton-block--image {
+  height: 360px;
+  margin: 24px 0;
+}
+
+.skeleton-block--short {
+  width: 60%;
+}
